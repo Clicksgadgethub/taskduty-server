@@ -6,10 +6,12 @@ const mongoose = require("mongoose")
 const connect = require('./config/db')
 const userRouter = require('./routes/userRoute')
 const taskRouter = require('./routes/taskRoute')
+const cors = require("cors")
 
 
 // middlewares 
 app.use(express.json());
+app.use(cors())
 
 
 // API's
